@@ -76,14 +76,14 @@ public class AppController {
         }
 
         if (!userService.isUserSSOUnique(user.getId(), user.getUsuId())) {
-            FieldError usuError = new FieldError("user", "usuId", messageSource.getMessage("non.unique.usuId", new String[]{user.getUsuId()}, Locale.getDefault()));
+            FieldError usuError = new FieldError("Usuario", "usuId", messageSource.getMessage("non.unique.usuId", new String[]{user.getUsuId()}, Locale.getDefault()));
             result.addError(usuError);
             return "registration";
         }
 
         userService.saveUser(user);
 
-        model.addAttribute("success", "Usuario " + user.getNombre() + " " + user.getApellido() + " Registrado Correctamente!!!");
+        model.addAttribute("success", " Usuario  " + user.getNombre() + " " + user.getApellido() + "  Registrado Correctamente!!!");
         model.addAttribute("loggedinuser", getPrincipal());
         //return "success";
         return "registrationsuccess";

@@ -13,7 +13,7 @@
 </head>
 
 <body>
- 	<div class="generic-container">
+ 	<div class="generic-container" >
 		<%@include file="authheader.jsp" %>
 
 		<div class="well lead">Registar Usuario</div>
@@ -46,14 +46,14 @@
 	
 			<div class="row">
 				<div class="form-group col-md-12">
-					<label class="col-md-3 control-lable" for="usuId">usu ID</label>
+					<label class="col-md-3 control-lable" for="usuId">Usuario ID</label>
 					<div class="col-md-7">
 						<c:choose>
 							<c:when test="${edit}">
 								<form:input type="text" path="usuId" id="usuId" class="form-control input-sm" disabled="true"/>
 							</c:when>
 							<c:otherwise>
-								<form:input type="text" path="usuId" id="ssoId" class="form-control input-sm" />
+								<form:input type="text" path="usuId" id="usuId" class="form-control input-sm" />
 								<div class="has-error">
 									<form:errors path="usuId" class="help-inline"/>
 								</div>

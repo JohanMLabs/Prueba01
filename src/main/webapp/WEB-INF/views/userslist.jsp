@@ -26,10 +26,11 @@
 			<table class="table table-hover">
 	    		<thead>
 		      		<tr>
+				        <th>Id</th>
 				        <th>Nombre</th>
 				        <th>Apellido</th>
 				        <th>Correo</th>
-				        <th>Usu ID</th>
+				        <th>Usuario ID</th>
 				        <sec:authorize access="hasRole('ADMIN')">
 				        	<th width="100"></th>
 				        </sec:authorize>
@@ -42,6 +43,7 @@
 	    		<tbody>
 				<c:forEach items="${users}" var="user">
 					<tr>
+						<td>${user.id}</td>
 						<td>${user.nombre}</td>
 						<td>${user.apellido}</td>
 						<td>${user.correo}</td>
